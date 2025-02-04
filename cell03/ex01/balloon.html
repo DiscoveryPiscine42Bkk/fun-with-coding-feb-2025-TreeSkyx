@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon EX01</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .balloon {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+    <div class="balloon"></div>
+</body>
+
+<script>
+    const colors = ['red', 'green', 'blue'];
+    let colorIndex = 0;
+
+    const clickBalloon = () => {
+        const balloon = document.querySelector('.balloon');
+        const currentWidth = parseInt(window.getComputedStyle(balloon).width);
+        const currentHeight = parseInt(window.getComputedStyle(balloon).height);
+
+        balloon.style.width = (currentWidth + 10) + 'px';
+        balloon.style.height = (currentHeight + 10) + 'px';
+
+        colorIndex = (colorIndex + 1) % colors.length;
+        balloon.style.backgroundColor = colors[colorIndex];
+
+        if (currentWidth >= 420) {
+            explodeBalloon();
+        }
+    }
+
+    const explodeBalloon = () => {
+        const balloon = document.querySelector('.balloon');
+        balloon.style.width = '200px';
+        balloon.style.height = '200px';
+        balloon.style.backgroundColor = 'red';
+        colorIndex = 0;
+    }
+
+    const deflateBalloon = () => {
+        const balloon = document.querySelector('.balloon');
+        const currentWidth = parseInt(window.getComputedStyle(balloon).width);
+        const currentHeight = parseInt(window.getComputedStyle(balloon).height);
+
+        if (currentWidth > 200) {
+            balloon.style.width = (currentWidth - 5) + 'px';
+            balloon.style.height = (currentHeight - 5) + 'px';
+        }
+
+        colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+        balloon.style.backgroundColor = colors[colorIndex];
+    }
+
+    document.querySelector('.balloon').addEventListener('click', clickBalloon);
+    document.querySelector('.balloon').addEventListener('mouseleave', deflateBalloon);
+</script>
+
+</html>
