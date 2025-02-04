@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: fit-content;
+  background-color: rgb(172, 213, 226);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.info > .intra {
+  font-size: 25px;
+}
+
+.info > .description {
+  font-size: 20px;
+  color: grey;
+}
+
+.info > .class {
+  font-size: 20px;
+}
+
+.info > .social {
+  font-size: 20px;
+}
+
+.info > .social > img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 0 0 10px 10px;
+}
