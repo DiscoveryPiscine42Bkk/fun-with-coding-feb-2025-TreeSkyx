@@ -1,0 +1,11 @@
+select {
+  background-color: burlywood;
+  font-size: 1vw;
+  border-radius: 7px;
+}
+
+label {
+  font-size: 1vw;
+  color: maroon;
+  font-weight: bold;
+}
