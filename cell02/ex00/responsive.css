@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border: 3px solid black;
+  width: 100vw;
+  height: 100vh;
+}
+
+td {
+  border: 3px solid black;
+  text-align: left;
+  font-size: 2vw;
+}
+
+.firstcell {
+  background-color: antiquewhite;
+}
+
+.secondcell {
+  background-color: cornflowerblue;
+}
