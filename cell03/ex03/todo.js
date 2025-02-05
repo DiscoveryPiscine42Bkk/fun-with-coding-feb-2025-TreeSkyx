@@ -17,7 +17,8 @@ function saveTodos() {
   document.querySelectorAll("#ft_list div").forEach((todo) => {
     todos.push(todo.innerText);
   });
-  document.cookie = `todos=${JSON.stringify(todos)}; path=/;`;
+  document.cookie =
+    "todos=" + encodeURIComponent(JSON.stringify(todos)) + "; path=/;";
 }
 
 function addTodo(text, save = true) {
@@ -43,7 +44,7 @@ function addTodo(text, save = true) {
 
 function getCookie(name) {
   const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
-  return match ? match[2] : null;
+  return match ? decodeURIComponent(match[2]) : null;
 }
 
 document.getElementById("newTaskBtn").addEventListener("click", () => {
