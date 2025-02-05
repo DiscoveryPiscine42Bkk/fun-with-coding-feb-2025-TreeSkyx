@@ -63,8 +63,9 @@
         var secondNumber = $("#secondNumber").val();
         var operator = $("#operator").val();
         var result = 0;
+        console.log(firstNumber);
 
-        if (firstNumber === "" || secondNumber === "" || isNaN(firstNumber) || isNaN(secondNumber) || firstNumber < 0 || secondNumber < 0) {
+        if (firstNumber === "" || secondNumber === "" || isNaN(firstNumber) || isNaN(secondNumber) || firstNumber < 0 || secondNumber < 0 || !Number.isInteger(parseFloat(firstNumber)) || !Number.isInteger(parseFloat(secondNumber))) {
             alert("Error :(");
             console.log("Error :(");
             return;

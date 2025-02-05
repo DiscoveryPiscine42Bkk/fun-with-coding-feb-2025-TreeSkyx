@@ -22,7 +22,9 @@ function saveTodos() {
   $("#ft_list div").each(function () {
     todos.push($(this).text());
   });
-  document.cookie = `todos=${JSON.stringify(todos)}; path=/;`;
+  document.cookie = `todos=${encodeURIComponent(
+    JSON.stringify(todos)
+  )}; path=/;`;
 }
 
 function addTodo(text, save = true) {
@@ -46,5 +48,5 @@ function addTodo(text, save = true) {
 
 function getCookie(name) {
   const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
-  return match ? match[2] : null;
+  return match ? decodeURIComponent(match[2]) : null;
 }

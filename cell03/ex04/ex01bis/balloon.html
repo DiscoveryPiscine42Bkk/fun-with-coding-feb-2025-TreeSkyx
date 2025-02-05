@@ -49,7 +49,7 @@
         colorIndex = (colorIndex + 1) % colors.length;
         $balloon.css("background-color", colors[colorIndex]);
 
-        if (currentWidth >= 420) {
+        if (currentWidth + 10 >= 420) {
             explodeBalloon();
         }
     }
