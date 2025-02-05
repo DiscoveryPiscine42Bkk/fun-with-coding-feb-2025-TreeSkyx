@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator JS EX02</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 100vh;
+        margin: 0;
+        background-color: beige;
+    }
+
+    .operator {
+        position: relative;
+        left: 150px;
+        padding: 10px 4px;
+        border-radius: 50px;
+    }
+
+    input {
+        padding: 10px 4px;
+        border-radius: 50px;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 50px;
+    }
+</style>
+
+<body>
+    <input type="text" id="firstNumber" placeholder="First Number">
+    <select id="operator" class="operator">
+        <option value="add">+</option>
+        <option value="subtract">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+        <option value="modulus">%</option>
+    </select>
+    <input type="text" id="secondNumber" placeholder="Second Number">
+    <button onclick="calculate()">Try me!</button>
+</body>
+<script>
+    function calculate() {
+        var firstNumber = document.getElementById("firstNumber").value;
+        var secondNumber = document.getElementById("secondNumber").value;
+        var operator = document.getElementById("operator").value;
+        var result = 0;
+
+        if (firstNumber === "" || secondNumber === "" || isNaN(firstNumber) || isNaN(secondNumber) || firstNumber < 0 || secondNumber < 0) {
+            alert("Error :(");
+            console.log("Error :(");
+            return;
+        }
+        if ((operator == "divide" || operator == "modulus") && secondNumber == 0) {
+            alert("It’s over 9000!");
+            console.log("It’s over 9000!");
+            return;
+        }
+
+        if (operator == "add") {
+            result = parseInt(firstNumber) + parseInt(secondNumber);
+        } else if (operator == "subtract") {
+            result = parseInt(firstNumber) - parseInt(secondNumber);
+        } else if (operator == "multiply") {
+            result = parseInt(firstNumber) * parseInt(secondNumber);
+        } else if (operator == "divide") {
+            result = parseInt(firstNumber) / parseInt(secondNumber);
+        } else if (operator == "modulus") {
+            result = parseInt(firstNumber) % parseInt(secondNumber);
+        }
+
+        alert("Result: " + result);
+        console.log("Result: " + result);
+    }
+
+    setInterval(function () {
+        alert('Please, use me...');
+    }, 30000);
+</script>
+
+</html>
