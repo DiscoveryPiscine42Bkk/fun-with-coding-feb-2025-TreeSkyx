@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vluroagr</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="left-nav">
+            <a href="./home.html">
+                <img src="./image/cat.png" alt="home" class="logo">
+            </a>
+            <a href="./home.html"><b>Home</b></a>
+            <a href="#about">About me</a>
+            <a href="#project">Showcase</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+        <div class="right-nav">
+            <img src="./image/running_cat.gif" alt="cat" class="cat">
+            <img src="./image/full-battery.png" alt="bat" width="30px" height="20px">
+            <img src="./image/wifi.png" alt="bat" width="20px" height="20px">
+            <div id="clock"></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="title-bar">
+            <div class="buttons">
+                <span class="button red"></span>
+                <span class="button yellow"></span>
+                <span class="button green"></span>
+            </div>
+        </div>
+
+        <div class="content">
+            <section class="section about-me" id="about">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h1>Hi!</h1>
+                        <h1>I'm <span>Lyy,</span></h1>
+                        <h1>Varintorn Luroagroung</h1>
+                        <p>Hi! I'm a Sophomore Computer Engineering student at the School of Engineering, KMITL.<br />
+                            I have a strong passion for programming and enjoy exploring various aspects of software
+                            development.</p>
+                    </div>
+                    <img src="./image/ly.jpg" alt="Profile Picture" class="profile-pic">
+                </div>
+            </section>
+
+            <section class="section projects" id="project">
+                <div class="project-container">
+                    <div class="selector">
+                        <button class="selected" onclick="changeContent('skill')">
+                            <div class="icon">
+                                <img src="./image/skill.png" />
+
+                            </div>
+                            Skill
+                        </button>
+                        <button onclick="changeContent('project')">
+                            <div class="icon">
+                                <img src="./image/folder.png" />
+
+                            </div>Project
+                        </button>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="content-section skill-section">
+                            <h3>Languages :</h3>
+                            <div class="icon-tools">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                            </div>
+                            <hr />
+                            <h3>Tools:</h3>
+                            <div class="icon-tools">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" />
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" />
+                                <img src="https://nodered.org/about/resources/media/node-red-icon-2.png">
+                            </div>
+                        </div>
+                        <div class="content-section project-section">
+                            <div class="project-card">
+                                <h3>Smart Watering Hub</h3>
+                                <div class="project-detail">
+                                    <p>An automatic plant watering system that can be controlled remotely via a mobile
+                                        phone.</p>
+
+
+                                    <div class="tech-stack">
+                                        <p>Languages and Tools:</p>
+                                        <div class="icon-tools">
+                                            <img
+                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+                                            <img
+                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" />
+                                            <img src="https://nodered.org/about/resources/media/node-red-icon-2.png">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Mqtt-hor.svg/2560px-Mqtt-hor.svg.png"
+                                                style="width: fit-content !important;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <h3>Model AI Predictive Maintenance</h3>
+                                <div class="project-detail">
+                                    <p>A real-time AI model for predicting the operational condition of machinery and
+                                        detecting whether a workpiece is normal or defective.</p>
+
+
+                                    <div class="tech-stack">
+                                        <p>Languages and Tools:</p>
+                                        <div class="icon-tools">
+                                            <img
+                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <h3>Wild Rush! Project</h3>
+                                <div class="project-detail">
+                                    <p>Game development project where a dinosaur collects coins within a limited time.
+                                    </p>
+
+                                    <div class="tech-stack">
+                                        <p>Languages and Tools:</p>
+                                        <div class="icon-tools">
+                                            <img
+                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
+                                            <img
+                                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="section contact" id="contact">
+                <div class="contact-info">
+                    <p class="ques">I appreciate your interest! However, I don't have personal contact information.
+                        😞</p>
+                    <p class="ans">You can contact me via email or check out my projects on GitHub.</p>
+                    <div class="image">
+                        Here is my email and github: <a href="mailto:66010751@kmitl.ac.th"><img src="./image/email.png"
+                                alt="mail" width="50px" height="50px"></a>
+                        <a href="https://github.com/Varintornlu"><img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                alt="github" width="50px" height="50px"></a>
+                    </div>
+                    <p class="quest">Thank you, 😊✨</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="folder">
+            <div class="folder-name">Visual Studio Code</div>
+            <img src="./image/vscode.png" alt="vscode">
+            <div class="circle"></div>
+        </div>
+        <div class="folder">
+            <div class="folder-name">wsomphao</div>
+            <a href="cv1.html">
+                <img src="./image/folder.png" alt="wsomphao">
+            </a>
+            <div class="circle"></div>
+        </div>
+        <div class="folder">
+            <div class="folder-name">vluroagr</div>
+            <a href="cv2.html">
+                <img src="./image/folder.png" alt="vluroagr">
+            </a>
+            <div class="circle"></div>
+        </div>
+        <div class="folder">
+            <div class="folder-name">Github</div>
+            <img src="./image/github.png" alt="Github">
+            <div class="circle"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
