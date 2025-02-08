@@ -56,6 +56,12 @@ body {
   font-size: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    padding: 5px;
+  }
+}
 .cat {
   width: 30px;
   height: 30px;
@@ -186,7 +192,7 @@ body {
   opacity: 0.8;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .about-content {
     flex-direction: column;
     text-align: center;
@@ -196,6 +202,43 @@ body {
   .profile-pic {
     margin: 0;
     max-width: 250px;
+    max-height: 300px;
+  }
+
+  .about-text {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .profile-pic {
+    margin: 0;
+    max-width: 250px;
+    max-height: 300px;
+  }
+
+  .about-text {
+    width: 90%;
+  }
+}
+
+@media (max-width: 300px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .profile-pic {
+    margin: 0;
+    max-width: 100px;
+    max-height: 150px;
   }
 
   .about-text {
@@ -396,6 +439,45 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .skill-section {
+    padding: 15px;
+  }
+
+  .skill-section h3 {
+    font-size: 1rem;
+  }
+
+  .skill-section img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-section .icon-tools {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 630px) {
+  .skill-section {
+    padding: 10px;
+  }
+
+  .skill-section h3 {
+    font-size: 1rem;
+  }
+
+  .skill-section img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skill-section .icon-tools {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
 .tech-stack p {
   padding-bottom: 5px;
 }
@@ -522,11 +604,48 @@ body {
 .contact > .contact-info > .quest {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
   width: 20%;
-  max-width: 675px;
+  max-width: 300px;
   margin-top: 10px;
   padding: 2%;
   background-color: rgba(208, 207, 207, 0.607);
   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 15px;
+  }
+
+  .contact-info p {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .image p {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .image {
+    width: 90%;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 10px;
+  }
+
+  .contact-info p {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .image img {
+    width: 40px;
+    height: 40px;
+  }
 }
